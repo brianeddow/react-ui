@@ -4,7 +4,10 @@ import styled from "styled-components";
 import AnimatedNavBar from "./AnimatedNav";
 import BodyTag from "./Body";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAsterisk, faCheckSquare, faCoffee } from '@fortawesome/free-solid-svg-icons'
+import { faAsterisk, 
+         faCheckSquare, 
+         faCoffee, 
+         faAngleDoubleDown } from '@fortawesome/free-solid-svg-icons'
 
 const Wrapper = styled.div`
   display: block;
@@ -24,6 +27,7 @@ const Banner = styled.div`
   padding: 3px;
   margin-bottom: 5px;
   color: #544838;
+  border-radius: 2px;
   background: #a89070;
 `;
 
@@ -37,12 +41,14 @@ const Tile = styled.div`
   width: 400px;
   height: 50px;
   color: #7e6c54;
+  border-radius: 2px;
   background: #fff;
   transition: transform 130ms ease-out;
 
   &:hover {
-    transform: translateY(-1.2px);
+    transform: translateY(-1px);
     background: #faf7f3;
+    border-bottom: 1px solid #544838;
   }
 `;
 
@@ -72,7 +78,7 @@ class Form extends Component {
       <BodyTag>
         <Wrapper>
           <Banner onMouseEnter={this.onMouseEnter} >
-            Hover Me
+            <FontAwesomeIcon icon={faAngleDoubleDown} />
             {this.state.shown && 
               <AnimatedNavBar mouseLeave={this.onMouseLeave} />}
           </Banner>

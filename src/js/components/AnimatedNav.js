@@ -7,7 +7,7 @@ const WhiteBox = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  color: ${props => props.theme.color};
+  color: #7e6c54;
   width: 392px;
   height: 172px;
   background: #e4d2ba;
@@ -21,10 +21,6 @@ const WhiteBox = styled.div`
   }
 `;
 
-const theme = {
-  color: "red"
-};
-
 class AnimatedNavBar extends Component {
   state = {
     shown: false
@@ -33,7 +29,7 @@ class AnimatedNavBar extends Component {
   render() {
     return (
       <WhiteBox onMouseLeave={this.props.mouseLeave}>
-        <p>lovely</p>
+        <p>DROPDOWN_UI</p>
       </WhiteBox>
     );
   }
