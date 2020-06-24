@@ -41,12 +41,18 @@ const Tile = styled.div`
   text-align: center;
   width: 400px;
   height: 50px;
-  color: #7e6c54;
+  color: ${props => props.extras ? // temp behavior
+           "#ff7c7c" : 
+           "#7e6c54"
+  };
   border-radius: 2px;
-  background: #fff;
+  background: ${props => props.extras ? // temp behavior
+                "#ddd" : 
+                "#fff"
+  };
   transition: transform 130ms ease-out;
 
-  &:hover {
+  &:hover ${Tile} {
     transform: translate(-3px,-1px);
     background: #faf7f3;
     border-bottom: 1px solid #544838;
@@ -58,13 +64,15 @@ class Form extends Component {
   state = {
     dropDown: false,
     bgOne: false,
-    moveNav: false
+    moveNav: false,
+    extras: false
   }
 
   onMouseEnter = () => this.setState({ dropDown: true });
   onMouseLeave = () => this.setState({ dropDown: false });
   handleBg = () => this.setState({ bgOne: !this.state.bgOne });
   handleNav = () => this.setState({ moveNav: !this.state.moveNav });
+  handleExtras = () => this.setState({ extras: !this.state.extras });
 
   render() {
     return (
@@ -82,7 +90,7 @@ class Form extends Component {
           <Tile onClick={this.handleNav} >
             <FontAwesomeIcon icon={faCheckSquare} />
           </Tile>
-          <Tile>
+          <Tile onClick={this.handleExtras} extras={this.state.extras} >
             <FontAwesomeIcon icon={faCoffee} />
           </Tile>
         </Wrapper>
