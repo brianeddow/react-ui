@@ -1,5 +1,6 @@
-import styled, { keyframes, css } from "styled-components";
-import myFrames from "./Keyframes";
+import styled, { keyframes } from "styled-components";
+
+const bgUrl = "https://wallpaper-house.com/data/out/6/wallpaper2you_106232.jpg";
 
 const BodyTag = styled.div`
   position: absolute;
@@ -10,18 +11,14 @@ const BodyTag = styled.div`
   transition: 500ms ease-out;
 
   background: ${props => props.bgOne ? 
-                `url('../../src/media/brown.jpg')` : 
+                `url(${bgUrl})` : 
                 "#d6bb97"
   };
+  
   ${props => props.bgOne && `
   	background-size: cover;
   	transition: 500ms ease-out;
   `};
-
-  ${props => props.moveNav && css`
-  	animation: ${myFrames} 300ms ease-in-out 0s 4;
-  	transition: 100ms ease-out;
-  `}
 `;
 
 export default BodyTag;

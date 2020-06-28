@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
+import myFrames from "./Keyframes";
 import BodyTag from "./Body";
 import AnimatedNavBar from "./AnimatedNav";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -16,6 +17,11 @@ const Wrapper = styled.div`
   width: 400px;
   height: 210px;
   background: transparent;
+
+  ${props => props.moveNav && css`
+    animation: ${myFrames} 150ms ease-in-out 0s 5;
+    transition: 100ms ease-out;
+  `}
 `;
 
 const Banner = styled.div`
@@ -76,8 +82,8 @@ class Form extends Component {
 
   render() {
     return (
-      <BodyTag bgOne={this.state.bgOne} moveNav={this.state.moveNav} >
-        <Wrapper>
+      <BodyTag bgOne={this.state.bgOne} >
+        <Wrapper moveNav={this.state.moveNav}>
           <Banner onMouseEnter={this.onMouseEnter} onMouseLeave={this.onMouseLeave} >
             <FontAwesomeIcon icon={faAngleDoubleDown} />
             {this.state.dropDown && (
