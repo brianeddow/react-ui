@@ -1,6 +1,6 @@
 import { keyframes } from 'styled-components';
 
-const myFrames = keyframes`
+export const myFrames = keyframes`
 	0% {
 		-webkit-transform: translate(-5px);
 		transform: translate(-5px);
@@ -11,4 +11,12 @@ const myFrames = keyframes`
 	}
 `;
 
-export default myFrames;
+export const socialsFrames = keyframes`
+	0% {
+
+	}
+	60% {
+		-webkit-transform: translateY(-15px);
+		transform: translateY(-15px);
+	}
+`;

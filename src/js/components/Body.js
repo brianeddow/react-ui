@@ -14,7 +14,7 @@ const BodyTag = styled.div`
                 `url(${bgUrl})` : 
                 "#d6bb97"
   };
-  
+
   ${props => props.bgOne && `
   	background-size: cover;
   	transition: 500ms ease-out;

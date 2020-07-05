@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faInbox, faImage, faArrowCircleUp } from '@fortawesome/free-solid-svg-icons';
+import { faInbox, faImage, faPowerOff } from '@fortawesome/free-solid-svg-icons';
 
 const WhiteBox = styled.div`
   z-index: 1000;
@@ -15,12 +15,6 @@ const WhiteBox = styled.div`
   background: #e4d2ba;
   border: 1px solid #fff;
   opacity: .99;
-  transition: opacity 450ms ease-out;
-
-  &:hover {
-    transition: opacity 450ms ease-out;
-    opacity: .99;
-  }
 `;
 
 const Icon = styled.span`
@@ -62,7 +56,7 @@ class AnimatedNavBar extends Component {
         </Icon>
         <Icon>
           <FontAwesomeIcon 
-            icon={faArrowCircleUp} 
+            icon={faPowerOff} 
             size={this.size} 
           />
         </Icon>
