@@ -79,7 +79,7 @@ const ModifiedTile = styled.div`
   width: 400px;
   border: 0;
   background: transparent;
-  animation: ${socialsFrames} 400ms ease-in-out 0s 1;
+  animation: ${socialsFrames} 200ms ease 0s 1;
 `;
 
 class Form extends Component {

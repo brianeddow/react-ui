@@ -13,7 +13,8 @@ export const myFrames = keyframes`
 
 export const socialsFrames = keyframes`
 	0% {
-
+		-webkit-transform: translateY(-5px);
+		transform: translateY(-5px);
 	}
 	60% {
 		-webkit-transform: translateY(-15px);
