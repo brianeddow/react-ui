@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Socs } from "./GetSocials";
+import { Socials } from "./GetSocials";
 
 const size = {
 	height: "30px",
@@ -24,12 +24,12 @@ const IconWrapper = styled.p`
 
 export const MyIcon = ({ name }) => {
 
-	const soc = Socs[name];
+	const socialImg = Socials[name];
 
 	return (
 		<IconWrapper>
 			<img 
-				src={soc} 
+				src={socialImg} 
 				alt={name} 
 				style={name == "twitter" ? 
 							 size.twitter : 

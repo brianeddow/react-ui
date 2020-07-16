@@ -46,7 +46,6 @@ const Tile = styled.div`
   align-items: center;
   justify-content: center;
   margin-bottom: 3px;
-  text-align: center;
   width: 400px;
   height: 50px;
   color: ${props => props.extras ?
@@ -82,13 +81,41 @@ const ModifiedTile = styled.div`
   animation: ${socialsFrames} 200ms ease 0s 1;
 `;
 
+const Ticker = styled.p`
+  position: fixed;
+  bottom: 0;
+  left: 44.9%;
+  color: #e4d2ba;
+  font-family: sans-serif;
+  font-size: 10pt;
+`;
+
 class Form extends Component {
   state = {
     dropDown: false,
     bgOne: false,
     moveNav: false,
     extras: false,
-    socials: false
+    socials: false,
+    /* end core state */
+    clock: new Date().toLocaleString()
+  }
+
+  tick() {
+    this.setState({
+      clock: new Date().toLocaleString()
+    })
+  }
+
+  componentDidMount() {
+    this.interval = setInterval(
+      () => this.tick(), 
+      1000
+    );
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.interval);
   }
 
   onMouseEnter = () => this.setState({ dropDown: true });
@@ -119,12 +146,13 @@ class Form extends Component {
           </Tile>
 
           <ModifiedTile socials={this.state.socials} >
-            <MyIcon name="instagram" />
+            <MyIcon name="instagram" clock={this.state.clock} />
             <MyIcon name="facebook" />
             <MyIcon name="twitter" />
           </ModifiedTile>
-
         </Wrapper>
+
+        <Ticker>{this.state.clock}</Ticker>
       </BodyTag>
     );
   }
