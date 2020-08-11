@@ -12,13 +12,12 @@ const size = {
 }
 
 const IconWrapper = styled.p`
-	user-select: "none";
+	user-select: none;
 	transition: 250ms ease-in-out;
 
 	&:hover ${IconWrapper} {
-    transform: translate(-3px,-3px);
+    transform: scale(1.1) translate(0,-3px);
     transition: 250ms ease-in-out;
-    filter: drop-shadow(5px 9px 6px #2a241c);
   }
 `;
 
@@ -31,9 +30,10 @@ export const MyIcon = ({ name }) => {
 			<img 
 				src={socialImg} 
 				alt={name} 
-				style={name == "twitter" ? 
-							 size.twitter : 
-							 size
+				style={
+					name == "twitter" ? 
+					size.twitter : 
+					size
 				} 
 			/>
 		</IconWrapper>
