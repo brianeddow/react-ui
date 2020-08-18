@@ -45,7 +45,6 @@ class TileComponent extends Component {
     return (
       <TileInner onClick={() => {
         this.props.toggleState(id);
-        console.log(this.props.moveCarouselLeft)
       }} >
         <FontAwesomeIcon icon={faCheckSquare} />
       </TileInner>

@@ -26,9 +26,9 @@ class TickerWrapper extends Component {
 
 	componentDidMount() {
 		this.interval = setInterval(
-	      () => this.tick(), 
-	      1000
-	    );
+	  	() => this.tick(), 
+	    1000
+	   );
 	}
 
 	componentWillUnmount() {

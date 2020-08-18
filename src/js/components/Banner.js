@@ -31,7 +31,6 @@ class BannerWrapper extends Component {
 
   handleMouseToggle = () => {
     this.props.toggleState("dropDown");
-    console.log(this.props.dropDown);
   }
 
   render() {

@@ -44,7 +44,6 @@ class TileComponent extends Component {
     return (
       <TileInner onClick={() => {
         this.props.toggleState(id);
-        console.log(this.props.bgOne)
       }} >
         <FontAwesomeIcon icon={faAsterisk} />
       </TileInner>
