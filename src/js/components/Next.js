@@ -27,7 +27,7 @@ const Lines = [
 	"Using React Router",
 	"And figuring out how to use this software",
 	"To create the most fun designs",
-	"Simple designs"
+	"Keep it simple"
 ];
 
 const NextPage = () => {

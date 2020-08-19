@@ -28,6 +28,7 @@ const TileInner = styled.div`
   background: ${props => props.extras ? `${this.props.hoverClr}` : "#fff"};
   border-radius: 2px;
   transition: transform 130ms ease-out;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 
   &:hover ${TileInner} {
     transform: translate(-3px,-1px);

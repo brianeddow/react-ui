@@ -11,9 +11,9 @@ render(
 		<Switch>
 			<Route path="/two" component={NextPage} />
 		</Switch>
-	  <Provider store={store}>
-	    <App />
-	  </Provider>
-  </Router>,
+		<Provider store={store}>
+			<App />
+		</Provider>
+	</Router>,
   document.getElementById("container")
 );

@@ -22,6 +22,9 @@ import {
   faAngleDoubleDown 
 } from '@fortawesome/free-solid-svg-icons';
 
+const bgOne = "https://4.bp.blogspot.com/-oPDJM2wN8Ws/VTy7xDk53FI/AAAAAAAAEPs/r0j9fF0zN0U/s1600/Nature-Scenes-Wallpaper-5.jpg";
+const bgTwo = "https://cdn.wallpapersafari.com/5/7/yqe3im.jpg";
+
 
 class App extends Component {
   constructor(props) {
@@ -48,9 +51,9 @@ class App extends Component {
         <CarouselWrapper>
           <Carousel>
             <Link to="/two">
-              <CarouselItem opacity={0.5} bg={`http://4.bp.blogspot.com/-oPDJM2wN8Ws/VTy7xDk53FI/AAAAAAAAEPs/r0j9fF0zN0U/s1600/Nature-Scenes-Wallpaper-5.jpg`} />
+              <CarouselItem opacity={0.7} bg={bgOne} />
             </Link>
-            <CarouselItem opacity={0.5} bg={`https://cdn.wallpapersafari.com/5/7/yqe3im.jpg`} />
+            <CarouselItem opacity={0.7} bg={bgTwo} />
           </Carousel>
         </CarouselWrapper>
 
