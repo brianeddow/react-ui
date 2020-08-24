@@ -51,9 +51,9 @@ class App extends Component {
         <CarouselWrapper>
           <Carousel>
             <Link to="/two">
-              <CarouselItem opacity={0.7} bg={bgOne} />
+              <CarouselItem opacity={0.9} bg={bgOne} />
             </Link>
-            <CarouselItem opacity={0.7} bg={bgTwo} />
+            <CarouselItem opacity={0.9} bg={bgTwo} />
           </Carousel>
         </CarouselWrapper>
 
