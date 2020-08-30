@@ -1,6 +1,4 @@
 import React, { Component } from "react";
-import ReactDOM from "react-dom";
-import styled, { css } from "styled-components";
 import BodyTag from "./Body";
 import Wrapper from "./Wrapper";
 import Banner from "./Banner";
@@ -10,8 +8,9 @@ import TileC from "./TileC";
 import ModifiedTile from "./ModifiedTile";
 import AnimatedNavBar from "./AnimatedNavBar";
 import CarouselWrapper from "./CarouselWrapper";
-import Carousel from "./Carousel";
+import CarouselOneWrapper from "./CarouselOneWrapper";
 import CarouselItem from "./CarouselItem";
+import Carousel from "./Carousel";
 import Ticker from "./Ticker";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -22,9 +21,10 @@ import {
   faAngleDoubleDown 
 } from '@fortawesome/free-solid-svg-icons';
 
-const bgOne = "https://4.bp.blogspot.com/-oPDJM2wN8Ws/VTy7xDk53FI/AAAAAAAAEPs/r0j9fF0zN0U/s1600/Nature-Scenes-Wallpaper-5.jpg";
-const bgTwo = "https://cdn.wallpapersafari.com/5/7/yqe3im.jpg";
+import { toggleState } from "../actions/index";
+import store from "../store/index";
 
+const bgTwo = "https://cdn.wallpapersafari.com/5/7/yqe3im.jpg";
 
 class App extends Component {
   constructor(props) {
@@ -50,9 +50,7 @@ class App extends Component {
 
         <CarouselWrapper>
           <Carousel>
-            <Link to="/two">
-              <CarouselItem opacity={0.9} bg={bgOne} />
-            </Link>
+            <CarouselOneWrapper />
             <CarouselItem opacity={0.9} bg={bgTwo} />
           </Carousel>
         </CarouselWrapper>

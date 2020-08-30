@@ -21,13 +21,15 @@ const mapStateToProps = state => {
 
 const ModifiedTile = styled.div`
   display: ${props => props.socials ? "flex" : "none"};
+  position: absolute;
+  z-index: 600;
   align-items: center;
   justify-content: space-around;
   padding-top: 0;
   width: 400px;
   border: 0;
   background: transparent;
-  animation: ${socialsFrames} 200ms ease 0s 1;
+  animation: ${socialsFrames} 200ms ease-in-out;
   transform: translate(0);
 `;
 

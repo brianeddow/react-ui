@@ -36,7 +36,7 @@ const NextPage = () => {
 		<NextOuter>
 			<NextInner>
 				Hello
-				{Lines.map((n,i) => <p>{n}</p>)}
+				{Lines.map((n,i) => <p key={i}>{n}</p>)}
 				<Link to="/">Back</Link>
 			</NextInner>
 		</NextOuter>

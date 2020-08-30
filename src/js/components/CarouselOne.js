@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
-const CarouselItem = styled.div`
-  z-index: 25;
+const CarouselOne = styled.div`
+  z-index: 100;
+  position: static;
   display: inline-block;
   width: 399px;
   height: 100%;
@@ -11,14 +12,8 @@ const CarouselItem = styled.div`
   opacity: ${props => props.opacity};
   background: url(${props => props.bg});
   background-size: cover;
+  background-repeat: no-repeat;
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
-  filter: grayscale(80%);
-  transition: all 1500ms;
-
-  &:hover {
-  	filter: grayscale(0);
-  	transition: all 1500ms;
-  }
 `;
 
-export default CarouselItem;
+export default CarouselOne;

@@ -16,6 +16,7 @@ const Wrap = styled.div`
   width: 400px;
   height: 210px;
   background: transparent;
+  overflow: hidden;
 
   ${props => props.moveNav && css`
     animation: ${myFrames} 150ms ease-in-out 0s 5;

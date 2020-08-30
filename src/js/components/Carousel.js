@@ -9,6 +9,9 @@ const mapStateToProps = state => {
 }
 
 const CarouselInner = styled.div`
+  position: relative;
+  top: 0;
+  z-index: 100;
   display: block;
   width: 300%;
   height: 100%;

@@ -26,7 +26,7 @@ $ npm start
 
 ## Inspiration
 
-# This is a creative pursuit resulting from the following tutorials
+This is a creative pursuit resulting from the following tutorials
 
 * https://www.valentinog.com/blog/babel/
 * https://www.valentinog.com/blog/redux/

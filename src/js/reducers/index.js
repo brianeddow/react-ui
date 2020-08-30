@@ -3,11 +3,12 @@ import { TOGGLE_STATE } from "../constants/action-types";
 const initialState = {
 	dropDown: false,
 	bgOne: false,
-    moveNav: false,
-    extras: false,
-    socials: false,
-    moveCarouselLeft: false,
-    clock: new Date().toLocaleString()
+  moveNav: false,
+  extras: false,
+  socials: false,
+  moveCarouselLeft: false,
+  carouselOne: false,
+  clock: new Date().toLocaleString()
 }
 
 function rootReducer(state = initialState, action) {
@@ -52,11 +53,18 @@ function rootReducer(state = initialState, action) {
 					moveCarouselLeft: newBool
 				}
 				break;
+			case "carouselOne":
+				return {
+					...state,
+					carouselOne: newBool
+				}
+				break;
 			case "clock":
 				return {
 					...state,
 					clock: new Date().toLocaleString()
 				}
+				break;
 		}
 	}
 	return state;
