@@ -21,8 +21,11 @@ import {
   faAngleDoubleDown 
 } from '@fortawesome/free-solid-svg-icons';
 
-import { toggleState } from "../actions/index";
-import store from "../store/index";
+/* 
+ * for testing purposes, easier to comment out */
+
+// import { toggleState } from "../actions/index";
+// import store from "../store/index";
 
 const bgTwo = "https://cdn.wallpapersafari.com/5/7/yqe3im.jpg";
 

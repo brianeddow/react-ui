@@ -15,6 +15,7 @@ const mapStateToProps = state => {
 
 const BannerInner = styled.div`
   z-index: 200;
+  display: block;
   margin: 0 auto;
   width: 392px;
   height: 30px;
