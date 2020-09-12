@@ -30,7 +30,7 @@ class CarouselOneWrapper extends Component {
 				<CarouselItemOverlay onMouseEnter={this.handleHover} onMouseLeave={this.handleHover} >
 					<Inner>+</Inner>
 				</CarouselItemOverlay>
-				<CarouselOne opacity={0.9} bg={bgOne} onMouseEnter={this.handleHover} onMouseLeave={this.handleHover} />
+				<CarouselOne bg={bgOne} onMouseEnter={this.handleHover} onMouseLeave={this.handleHover} />
 			</Link>
 		)
 	}

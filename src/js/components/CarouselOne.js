@@ -9,7 +9,6 @@ const CarouselOne = styled.div`
   margin-right: 1px;
   border: 0;
   border-radius: 14pt;
-  opacity: ${props => props.opacity};
   background: url(${props => props.bg});
   background-size: cover;
   background-repeat: no-repeat;

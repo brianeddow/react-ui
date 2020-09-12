@@ -32,6 +32,7 @@ const bgTwo = "https://cdn.wallpapersafari.com/5/7/yqe3im.jpg";
 class App extends Component {
   constructor(props) {
     super(props);
+    this.bgTwo = bgTwo;
   }
 
   componentDidMount() {
@@ -54,7 +55,7 @@ class App extends Component {
         <CarouselWrapper>
           <Carousel>
             <CarouselOneWrapper />
-            <CarouselItem opacity={0.9} bg={bgTwo} />
+            <CarouselItem opacity={0.9} bg={this.bgTwo} />
           </Carousel>
         </CarouselWrapper>
 

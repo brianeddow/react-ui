@@ -2,12 +2,16 @@ import React from "react";
 import styled from "styled-components";
 import { Socials } from "./GetSocials";
 
+const dropShadow = "drop-shadow(0 0 0.35rem gold)";
+
 const size = {
 	height: "30px",
 	width: "30px",
+	filter: dropShadow,
 	twitter: {
 		height: "30px",
-		width: "40px"
+		width: "40px",
+		filter: dropShadow
 	}
 }
 
@@ -16,8 +20,9 @@ const IconWrapper = styled.p`
 	transition: 250ms ease-in-out;
 
 	&:hover ${IconWrapper} {
-    transform: scale(1.1) translate(0,-3px);
+    transform: scale(1.2) translate(0,-3px);
     transition: 250ms ease-in-out;
+    filter: dropShadow;
   }
 `;
 

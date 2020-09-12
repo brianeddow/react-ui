@@ -15,12 +15,11 @@ const DropDown = styled.div`
   justify-content: center;
   color: #7e6c54;
   width: 390px;
-  height: 172px;
+  height: 145px;
   border-radius: 2px;
   background: #e4d2ba;
   border: 1px solid #fff;
-  opacity: .99;
-  transform: translate(0);
+  transform: translate(0,0);
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 `;
 
