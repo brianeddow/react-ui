@@ -13,12 +13,12 @@ const IconInner = styled.span`
   align-items: space-around;
   justify-content: center;
   width: 200px;
-  transition: 50ms ease-in;
+  transition: 125ms ease-in;
   transform: translate(0);
 
   &:hover ${IconInner} {
     transform: translate(-3px,-2px);
-    transition: 50ms ease-in;
+    transition: 125ms ease-in;
     filter: drop-shadow(5px 9px 6px #2a241c);
   }
 `;

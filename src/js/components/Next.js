@@ -1,6 +1,8 @@
-import React from "react";
+import React, { Component } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import store from "../store/index";
+import toggleState from "../actions/index";
 
 const NextOuter = styled.div`
 	position: absolute;
@@ -14,6 +16,7 @@ const NextOuter = styled.div`
 `;
 
 const NextInner = styled.div`
+	display: inline-block;
 	width: 100vw;
 	margin: 20vh auto;
 	color: white;
@@ -22,25 +25,60 @@ const NextInner = styled.div`
 	justify-content: center;
 `;
 
-const Lines = [
-	"This is just my alternate page",
-	"Using React Router",
-	"And figuring out how to use this software",
-	"To create the most fun designs",
-	"Keep it simple"
+const FloatingTile = styled.div`
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 450px;
+	height: 250px;
+	border: 0;
+	color: #000;
+	background: #fff;
+	filter: drop-shadow(0 0 0.75rem #aaa);
+`;
+
+const Tools = [
+	"React",
+	"React-Redux",
+	"React Router",
+	"Styled Components",
+	"Jest"
 ];
 
-const NextPage = () => {
+const liStyle = {
+	'list-style-type': 'none',
+	'text-align': 'center',
+	'margin-left': '-30px',
+	'line-height': '30px',
+	'font-color': '#000'
+};
 
-	return (
-		<NextOuter>
-			<NextInner>
-				Hello
-				{Lines.map((n,i) => <p key={i}>{n}</p>)}
-				<Link to="/">Back</Link>
-			</NextInner>
-		</NextOuter>
-	)
+const LinkStyle = {
+	'text-decoration': 'none'
+};
+
+class NextPage extends Component {
+
+	resetOverlay = () => {
+		store.dispatch(toggleState('carouselOne'));
+	}
+
+	render() {
+		return (
+			<NextOuter>
+				<NextInner>
+					<FloatingTile>
+						<ul style={liStyle}>
+						{Tools.map(tool => <li>{tool}</li>)}
+						</ul>
+					</FloatingTile>
+				</NextInner>
+				<NextInner onClick={this.resetOverlay()}>
+					<Link to="/" style={LinkStyle}>Back</Link>
+				</NextInner>
+			</NextOuter>
+		)
+	}
 }
 
 export default NextPage;
