@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import store from "../store/index";
 import toggleState from "../actions/index";
+import { Quicksand } from "../../css/index.css";
 
 const NextOuter = styled.div`
 	position: absolute;
@@ -16,7 +17,7 @@ const NextOuter = styled.div`
 `;
 
 const NextInner = styled.div`
-	display: inline-block;
+	display: block;
 	width: 100vw;
 	margin: 20vh auto;
 	color: white;
@@ -26,54 +27,90 @@ const NextInner = styled.div`
 `;
 
 const FloatingTile = styled.div`
+	position: relative;
+	z-index: 100;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	flex-direction: column;
 	width: 450px;
-	height: 250px;
+	height: 350px;
 	border: 0;
+	font-family: "Quicksand", sans-serif;
+	font-size: 10pt;
+	font-weight: 100;
+	letter-spacing: 2px;
+	text-decoration: underline;
 	color: #000;
 	background: #fff;
 	filter: drop-shadow(0 0 0.75rem #aaa);
 `;
 
+const ImageTile = styled.div`
+	position: relative;
+	z-index: 200;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	width: 450px;
+	height: 350px;
+	border: 0;
+	color: #000;
+	background: transparent;
+`;
+
 const Tools = [
-	"React",
-	"React-Redux",
-	"React Router",
-	"Styled Components",
-	"Jest"
+	"REACT",
+	"REACT-REDUX",
+	"REACT ROUTER",
+	"STYLED COMPONENTS",
+	"JEST"
 ];
 
 const liStyle = {
 	'list-style-type': 'none',
 	'text-align': 'center',
 	'margin-left': '-30px',
-	'line-height': '30px',
+	'line-height': '60px',
 	'font-color': '#000'
 };
 
 const LinkStyle = {
-	'text-decoration': 'none'
+	'text-decoration': 'none',
+	'color': '#fff'
+};
+
+const imgStyle = {
+	'width': '450px',
+	'height': '350px'
 };
 
 class NextPage extends Component {
 
-	resetOverlay = () => {
-		store.dispatch(toggleState('carouselOne'));
+	constructor(props) {
+		super(props);
+		this.header = `https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/abstract-watercolor-rainbow-splash-irina-sztukowski.jpg`;
 	}
+
+	// resetOverlay = () => {
+	// 	store.dispatch(toggleState('carouselOne'));
+	// }
 
 	render() {
 		return (
 			<NextOuter>
 				<NextInner>
+					<ImageTile>
+						<img src={this.header} style={imgStyle} />
+					</ImageTile>
 					<FloatingTile>
 						<ul style={liStyle}>
 						{Tools.map(tool => <li>{tool}</li>)}
 						</ul>
 					</FloatingTile>
 				</NextInner>
-				<NextInner onClick={this.resetOverlay()}>
+				<NextInner>
 					<Link to="/" style={LinkStyle}>Back</Link>
 				</NextInner>
 			</NextOuter>
