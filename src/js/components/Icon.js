@@ -14,7 +14,7 @@ const IconInner = styled.span`
   justify-content: center;
   width: 200px;
   transition: 125ms ease-in;
-  transform: translate(0);
+  transform: translate(0,0);
 
   &:hover ${IconInner} {
     transform: translate(-3px,-2px);

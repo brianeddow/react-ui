@@ -24,8 +24,8 @@ import {
 /* 
  * for testing purposes, easier to comment out */
 
-// import { toggleState } from "../actions/index";
-// import store from "../store/index";
+//import { toggleState } from "../actions/index";
+//import store from "../store/index";
 
 const bgTwo = "https://cdn.wallpapersafari.com/5/7/yqe3im.jpg";
 
@@ -55,7 +55,7 @@ class App extends Component {
         <CarouselWrapper>
           <Carousel>
             <CarouselOneWrapper />
-            <CarouselItem opacity={0.9} bg={this.bgTwo} />
+            <CarouselItem bg={this.bgTwo} />
           </Carousel>
         </CarouselWrapper>
 

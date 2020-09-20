@@ -16,8 +16,8 @@ const Overlay = styled.div`
   margin-top: ${props => props.carouselOne ? "0" : "-301px"};
   opacity: 0.1;
   border-radius: 14pt;
-  background: #ccc;
-  transition: 250ms cubic-bezier(.23,.6,.83,.67);
+  background: #fff;
+  transition: 225ms cubic-bezier(.23,.6,.83,.67);
 
   {/* when hovering, bring up opacity from 0.3 */}
   ${props => props.carouselOne && `

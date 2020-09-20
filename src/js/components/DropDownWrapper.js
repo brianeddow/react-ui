@@ -15,12 +15,21 @@ const DropDown = styled.div`
   justify-content: center;
   color: #7e6c54;
   width: 390px;
-  height: 145px;
+  height: 100px;
   border-radius: 2px;
   background: #e4d2ba;
   border: 1px solid #fff;
   transform: translate(0,0);
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transition-property: height;
+  transition: 500ms ease-in-out;
+
+  &:hover ${DropDown} {
+    height: 165px;
+    opacity: 1;
+    transition: 500ms ease-in-out;
+  }
 `;
 
 const DropDownWrapper = connect(mapStateToProps)(DropDown);

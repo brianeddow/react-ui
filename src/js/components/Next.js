@@ -69,11 +69,11 @@ const Tools = [
 ];
 
 const liStyle = {
-	'list-style-type': 'none',
-	'text-align': 'center',
-	'margin-left': '-30px',
-	'line-height': '60px',
-	'font-color': '#000'
+	'listStyleType': 'none',
+	'textAlign': 'center',
+	'marginLeft': '-30px',
+	'lineHeight': '60px',
+	'fontColor': '#000'
 };
 
 const LinkStyle = {
