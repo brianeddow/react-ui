@@ -11,7 +11,7 @@
 * React-Redux
 * React Router
 * Styled Components
-* Pure Functional Components
+* Jest
 
 ## Local Installation
 
