@@ -2,9 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import { connect } from "react-redux";
 
+/* Copyright 2020 Wallpaper Stream */
 const bgUrl = "https://wallpaperstream.com/wallpapers/full/abstract-art/Brown-Black-Abstract-HD-Wallpaper.jpg"
-
-/* "https://wallpaper-house.com/data/out/6/wallpaper2you_106232.jpg"; */
 
 const mapStateToProps = state => {
   return { bgOne: state.bgOne };

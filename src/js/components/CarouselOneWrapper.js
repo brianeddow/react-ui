@@ -6,6 +6,8 @@ import store from "../store/index";
 import toggleState from "../actions/index";
 import { Link } from "react-router-dom";
 
+
+/* Copyright 2020 Original Owner */
 const bgOne = "https://4.bp.blogspot.com/-oPDJM2wN8Ws/VTy7xDk53FI/AAAAAAAAEPs/r0j9fF0zN0U/s1600/Nature-Scenes-Wallpaper-5.jpg";
 
 const Inner = styled.div`

@@ -27,6 +27,7 @@ import {
 //import { toggleState } from "../actions/index";
 //import store from "../store/index";
 
+/* Copyright 2020 Wallpaper Safari */
 const bgTwo = "https://cdn.wallpapersafari.com/5/7/yqe3im.jpg";
 
 class App extends Component {

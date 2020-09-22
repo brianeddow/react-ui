@@ -33,6 +33,7 @@ const FloatingTile = styled.div`
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
+	user-select: none;
 	width: 450px;
 	height: 350px;
 	border: 0;
@@ -53,6 +54,7 @@ const ImageTile = styled.div`
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
+	user-select: none;
 	width: 450px;
 	height: 350px;
 	border: 0;
@@ -73,10 +75,10 @@ const liStyle = {
 	'textAlign': 'center',
 	'marginLeft': '-30px',
 	'lineHeight': '60px',
-	'fontColor': '#000'
+	'fontColor': '#000'	
 };
 
-const LinkStyle = {
+const linkStyle = {
 	'text-decoration': 'none',
 	'color': '#fff'
 };
@@ -86,32 +88,35 @@ const imgStyle = {
 	'height': '350px'
 };
 
+const style = {
+	liStyle,
+	linkStyle,
+	imgStyle
+}
+
 class NextPage extends Component {
 
 	constructor(props) {
 		super(props);
+		/* Copyright 2020 Fine Art America */
 		this.header = `https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/abstract-watercolor-rainbow-splash-irina-sztukowski.jpg`;
 	}
-
-	// resetOverlay = () => {
-	// 	store.dispatch(toggleState('carouselOne'));
-	// }
 
 	render() {
 		return (
 			<NextOuter>
 				<NextInner>
 					<ImageTile>
-						<img src={this.header} style={imgStyle} />
+						<img src={this.header} style={style.imgStyle} />
 					</ImageTile>
 					<FloatingTile>
-						<ul style={liStyle}>
+						<ul style={style.liStyle}>
 						{Tools.map(tool => <li>{tool}</li>)}
 						</ul>
 					</FloatingTile>
 				</NextInner>
 				<NextInner>
-					<Link to="/" style={LinkStyle}>Back</Link>
+					<Link to="/" style={style.linkStyle}>Back</Link>
 				</NextInner>
 			</NextOuter>
 		)
