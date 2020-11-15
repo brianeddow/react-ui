@@ -35,13 +35,13 @@ const FloatingTile = styled.div`
 	flex-direction: column;
 	user-select: none;
 	width: 450px;
-	height: 350px;
+	height: 400px;
 	border: 0;
-	font-family: "Quicksand", sans-serif;
+	font-family: Quicksand, sans-serif;
 	font-size: 10pt;
 	font-weight: 100;
 	letter-spacing: 2px;
-	text-decoration: underline;
+	text-decoration: none;
 	color: #000;
 	background: #fff;
 	filter: drop-shadow(0 0 0.75rem #aaa);
@@ -56,7 +56,7 @@ const ImageTile = styled.div`
 	flex-direction: column;
 	user-select: none;
 	width: 450px;
-	height: 350px;
+	height: 400px;
 	border: 0;
 	color: #000;
 	background: transparent;
@@ -79,13 +79,14 @@ const liStyle = {
 };
 
 const linkStyle = {
-	'text-decoration': 'none',
-	'color': '#fff'
+	'textDecoration': 'none',
+	'textTransform': 'uppercase',
+	'color': '#000'
 };
 
 const imgStyle = {
 	'width': '450px',
-	'height': '350px'
+	'height': '400px'
 };
 
 const style = {
@@ -99,7 +100,7 @@ class NextPage extends Component {
 	constructor(props) {
 		super(props);
 		/* Copyright 2020 Fine Art America */
-		this.header = `https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/abstract-watercolor-rainbow-splash-irina-sztukowski.jpg`;
+		this.header = 'https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/abstract-watercolor-rainbow-splash-irina-sztukowski.jpg';
 	}
 
 	render() {
@@ -111,12 +112,10 @@ class NextPage extends Component {
 					</ImageTile>
 					<FloatingTile>
 						<ul style={style.liStyle}>
-						{Tools.map(tool => <li>{tool}</li>)}
+							{Tools.map((tool, i) => <li key="_i">{tool}</li>)}
+							<Link to="/" style={style.linkStyle}>&#60;&#60;&#60;</Link>
 						</ul>
 					</FloatingTile>
-				</NextInner>
-				<NextInner>
-					<Link to="/" style={style.linkStyle}>Back</Link>
 				</NextInner>
 			</NextOuter>
 		)

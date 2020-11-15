@@ -21,7 +21,8 @@ const TileInner = styled.div`
   align-items: center;
   justify-content: center;
   margin-bottom: 3px;
-  width: 400px;
+  margin-left: 3px;
+  width: 396px;
   height: 50px;
   color: ${props => props.extras ? `${hoverClr}` : "#7e6c54"};
   background: ${props => props.extras ? `${hoverClr}` : "#fff"};

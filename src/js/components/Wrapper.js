@@ -13,7 +13,7 @@ const Wrap = styled.div`
   display: block;
   margin: 0 auto;
   padding-top: 100px;
-  width: 400px;
+  width: 402px;
   height: 210px;
   background: transparent;
   overflow: hidden;

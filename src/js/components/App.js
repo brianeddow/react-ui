@@ -34,16 +34,25 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.bgTwo = bgTwo;
+    this.state = {
+      bacon: null
+    }
   }
 
   componentDidMount() {
-    console.log("Hi there. Thanks for visiting my React Redux app")
+    console.log("Hi there. Thanks for visiting my React Redux app.")
+    this.getBacon()
+  }
+
+  async getBacon() {
+    let response = await fetch('https://baconipsum.com/api/?callback=?');
+    let data = await response.json()
+    this.setState({ bacon: data.join(' ') })
   }
 
   render() {
     return (
       <BodyTag>
-
         <Wrapper>
           <Banner />
           <TileA id="bgOne" />

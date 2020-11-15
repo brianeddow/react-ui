@@ -14,14 +14,14 @@ const Overlay = styled.div`
   width: 399px;
   height: 300px;
   margin-top: ${props => props.carouselOne ? "0" : "-301px"};
-  opacity: 0.1;
+  opacity: 0.2;
   border-radius: 14pt;
   background: #fff;
   transition: 225ms cubic-bezier(.23,.6,.83,.67);
 
   {/* when hovering, bring up opacity from 0.3 */}
   ${props => props.carouselOne && `
-    opacity: 0.5;
+    opacity: 0.4;
   `}
 `;
 
