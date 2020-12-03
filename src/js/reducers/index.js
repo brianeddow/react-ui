@@ -20,49 +20,49 @@ function rootReducer(state = initialState, action) {
 			case "dropDown":
 				return {
 					...state,
-					dropDown: newBool
+					[newKey]: newBool
 				}
 				break;
 			case "bgOne":
 				return {
 					...state,
-					bgOne: newBool
+					[newKey]: newBool
 				}
 				break;
 			case "moveNav":
 				return {
 					...state,
-					moveNav: newBool
+					[newKey]: newBool
 				}
 				break;
 			case "extras":
 				return {
 					...state,
-					extras: newBool
+					[newKey]: newBool
 				}
 				break;
 			case "socials":
 				return {
 					...state,
-					socials: newBool
+					[newKey]: newBool
 				}
 				break;
 			case "moveCarouselLeft":
 				return {
 					...state,
-					moveCarouselLeft: newBool
+					[newKey]: newBool
 				}
 				break;
 			case "carouselOne":
 				return {
 					...state,
-					carouselOne: newBool
+					[newKey]: newBool
 				}
 				break;
 			case "clock":
 				return {
 					...state,
-					clock: new Date().toLocaleString()
+					[newKey]: new Date().toLocaleString()
 				}
 				break;
 		}
