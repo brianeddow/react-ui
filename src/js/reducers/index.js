@@ -8,6 +8,7 @@ const initialState = {
   socials: false,
   moveCarouselLeft: false,
   carouselOne: false,
+  weather: false,
   clock: new Date().toLocaleString()
 }
 
@@ -54,6 +55,12 @@ function rootReducer(state = initialState, action) {
 				}
 				break;
 			case "carouselOne":
+				return {
+					...state,
+					[newKey]: newBool
+				}
+				break;
+			case "weather":
 				return {
 					...state,
 					[newKey]: newBool

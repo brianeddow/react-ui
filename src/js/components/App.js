@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import axios from "axios";
 import BodyTag from "./Body";
 import Wrapper from "./Wrapper";
 import Banner from "./Banner";
@@ -12,6 +13,8 @@ import CarouselOneWrapper from "./CarouselOneWrapper";
 import CarouselItem from "./CarouselItem";
 import Carousel from "./Carousel";
 import Ticker from "./Ticker";
+import Weather from "./Weather";
+import WeatherButton from "./WeatherButton";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { 
@@ -27,15 +30,14 @@ import {
 //import { toggleState } from "../actions/index";
 //import store from "../store/index";
 
-/* Copyright 2020 Wallpaper Safari */
-const bgTwo = "https://cdn.wallpapersafari.com/5/7/yqe3im.jpg";
 
 class App extends Component {
   constructor(props) {
     super(props);
-    this.bgTwo = bgTwo;
+    this.bgTwo = "../../src/media/carouselOneImage.png";
     this.state = {
-      bacon: null
+      bacon: null,
+      weather: false
     }
   }
 
@@ -45,14 +47,18 @@ class App extends Component {
   }
 
   async getBacon() {
-    let response = await fetch('https://baconipsum.com/api/?callback=?');
-    let data = await response.json()
-    this.setState({ bacon: data.join(' ') })
+    let response = await axios('https://baconipsum.com/api/?callback=?');
+    this.setState({ bacon: response.data })
   }
 
   render() {
     return (
       <BodyTag>
+        <WeatherButton />
+        <Weather>
+          {this.state.bacon}
+        </Weather>
+
         <Wrapper>
           <Banner />
           <TileA id="bgOne" />

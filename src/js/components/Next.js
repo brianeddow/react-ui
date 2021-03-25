@@ -99,8 +99,7 @@ class NextPage extends Component {
 
 	constructor(props) {
 		super(props);
-		/* Copyright 2020 Fine Art America */
-		this.header = 'https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/abstract-watercolor-rainbow-splash-irina-sztukowski.jpg';
+		this.bg = "../../src/media/watercolor.png";
 	}
 
 	render() {
@@ -108,7 +107,7 @@ class NextPage extends Component {
 			<NextOuter>
 				<NextInner>
 					<ImageTile>
-						<img src={this.header} style={style.imgStyle} />
+						<img src={this.bg} style={style.imgStyle} />
 					</ImageTile>
 					<FloatingTile>
 						<ul style={style.liStyle}>
