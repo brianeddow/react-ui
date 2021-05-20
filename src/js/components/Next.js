@@ -111,7 +111,7 @@ class NextPage extends Component {
 					</ImageTile>
 					<FloatingTile>
 						<ul style={style.liStyle}>
-							{Tools.map((tool, i) => <li key="_i">{tool}</li>)}
+							{Tools.map((tool, i) => <li key={`_${tool}`}>{tool}</li>)}
 							<Link to="/" style={style.linkStyle}>&#60;&#60;&#60;</Link>
 						</ul>
 					</FloatingTile>

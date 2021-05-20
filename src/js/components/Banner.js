@@ -37,10 +37,7 @@ class BannerWrapper extends Component {
 
   render() {
     return (
-      <BannerInner 
-        onMouseEnter={this.handleMouseToggle}
-        onMouseLeave={this.handleMouseToggle} 
-      >
+      <BannerInner onMouseEnter={this.handleMouseToggle} >
         <FontAwesomeIcon icon={faAngleDoubleDown} />
         <AnimatedNavBar onMouseLeave={this.handleMouseToggle} />
       </BannerInner>

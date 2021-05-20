@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import styled from "styled-components";
 import { connect } from "react-redux";
 import toggleState from "../actions/index";
+import _ from "lodash";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheckSquare } from '@fortawesome/free-solid-svg-icons';
@@ -45,9 +46,9 @@ class TileComponent extends Component {
     let id = this.props.id;
 
     return (
-      <TileInner onClick={() => {
+      <TileInner onClick={_.debounce(() => {
         this.props.toggleState(id);
-      }} >
+      }, 800)} >
         <FontAwesomeIcon icon={faCheckSquare} />
       </TileInner>
     );
