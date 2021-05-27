@@ -25,7 +25,6 @@ class Wrapper extends Component {
 
   handleHover = () => {
     store.dispatch(toggleState('weather'))
-    console.log('weather')
   }
 
   render() {

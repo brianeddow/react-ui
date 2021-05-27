@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+const bgTwo = "../../src/media/carouselOneImage.png";
+
 const CarouselItem = styled.div`
   z-index: 25;
   display: inline-block;
@@ -8,7 +10,7 @@ const CarouselItem = styled.div`
   margin-right: 1px;
   border: 0;
   border-radius: 14pt;
-  background: url(${props => props.bg});
+  background: url(${() => bgTwo});
   background-size: cover;
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
   filter: grayscale(100%);

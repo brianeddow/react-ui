@@ -32,13 +32,10 @@ import {
 
 
 class App extends Component {
+  
   constructor(props) {
     super(props);
-    this.bgTwo = "../../src/media/carouselOneImage.png";
-    this.state = {
-      bacon: null,
-      weather: false
-    }
+    this.state = { bacon: null }
   }
 
   componentDidMount() {
@@ -61,9 +58,9 @@ class App extends Component {
 
         <Wrapper>
           <Banner />
-          <TileA id="bgOne" />
-          <TileB id="moveCarouselLeft" />
-          <TileC id="socials" />
+          <TileA />
+          <TileB />
+          <TileC />
 
           <ModifiedTile />
         </Wrapper>
@@ -71,7 +68,7 @@ class App extends Component {
         <CarouselWrapper>
           <Carousel>
             <CarouselOneWrapper />
-            <CarouselItem bg={this.bgTwo} />
+            <CarouselItem />
           </Carousel>
         </CarouselWrapper>
 

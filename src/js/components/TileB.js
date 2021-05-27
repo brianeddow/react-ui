@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import styled from "styled-components";
 import { connect } from "react-redux";
 import toggleState from "../actions/index";
@@ -40,21 +40,20 @@ const TileInner = styled.div`
   }
 `;
 
-class TileComponent extends Component {
+const TileComponentB = (props) => {
+  let id = props.id;
 
-  render() {
-    let id = this.props.id;
-
-    return (
-      <TileInner onClick={_.debounce(() => {
-        this.props.toggleState(id);
-      }, 800)} >
-        <FontAwesomeIcon icon={faCheckSquare} />
-      </TileInner>
-    );
-  }
+  return (
+    <TileInner onClick={_.debounce(() => {
+      props.toggleState(id);
+    }, 800)} >
+      <FontAwesomeIcon icon={faCheckSquare} />
+    </TileInner>
+  );
 }
 
-const Tile = connect(mapStateToProps, { toggleState })(TileComponent);
+TileComponentB.defaultProps =  { id: "moveCarouselLeft" };
+
+const Tile = connect(mapStateToProps, { toggleState })(TileComponentB);
 
 export default Tile;
