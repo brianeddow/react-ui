@@ -14,11 +14,12 @@ const CarouselItem = styled.div`
   background-size: cover;
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
   filter: grayscale(100%);
-  transition: all 1500ms;
+  transition: all 500ms;
 
   &:hover {
   	filter: grayscale(0);
-  	transition: all 1500ms;
+  	transition: all 500ms;
+    transform: scale(1.05);
   }
 `;
 

@@ -19,7 +19,7 @@ const Overlay = styled.div`
   background: #fff;
   transition: 225ms cubic-bezier(.23,.6,.83,.67);
 
-  {/* when hovering, bring up opacity from 0.3 */}
+  {/* when hovering, bring up opacity from 0.2 */}
   ${props => props.carouselOne && `
     opacity: 0.4;
   `}

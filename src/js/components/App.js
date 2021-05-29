@@ -10,7 +10,7 @@ import ModifiedTile from "./ModifiedTile";
 import AnimatedNavBar from "./AnimatedNavBar";
 import CarouselWrapper from "./CarouselWrapper";
 import CarouselOneWrapper from "./CarouselOneWrapper";
-import CarouselItem from "./CarouselItem";
+import CarouselTwoWrapper from "./CarouselTwoWrapper";
 import Carousel from "./Carousel";
 import Ticker from "./Ticker";
 import Weather from "./Weather";
@@ -68,7 +68,7 @@ class App extends Component {
         <CarouselWrapper>
           <Carousel>
             <CarouselOneWrapper />
-            <CarouselItem />
+            <CarouselTwoWrapper />
           </Carousel>
         </CarouselWrapper>
 
