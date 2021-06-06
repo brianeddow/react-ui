@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { connect } from "react-redux";
 import toggleState from "../actions/index";
 import AnimatedNavBar from "./AnimatedNavBar";
-
+import _ from "lodash";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleDoubleDown } from '@fortawesome/free-solid-svg-icons';
 
@@ -14,7 +14,7 @@ const mapStateToProps = state => {
 }
 
 const BannerInner = styled.div`
-  z-index: 200;
+  z-index: 0;
   display: block;
   margin: 0 auto;
   width: 392px;
@@ -37,9 +37,9 @@ class BannerWrapper extends Component {
 
   render() {
     return (
-      <BannerInner onMouseEnter={this.handleMouseToggle} >
-        <FontAwesomeIcon icon={faAngleDoubleDown} />
-        <AnimatedNavBar onMouseLeave={this.handleMouseToggle} />
+      <BannerInner onClick={_.debounce(() => this.handleMouseToggle(), 300)} >
+        <FontAwesomeIcon icon={faAngleDoubleDown}/>
+        <AnimatedNavBar onMouseLeave={() => this.handleMouseToggle()} />
       </BannerInner>
     )
   }

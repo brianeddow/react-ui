@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import styled from "styled-components";
 import CarouselItem from "./CarouselItem";
 import store from "../store/index";
@@ -17,6 +17,14 @@ const Inner = styled.div`
 `;
 
 const CarouselTwoWrapper = (props) => {
+
+	const [title, setTitle] = useState("title");
+	const textInput = useRef();
+
+	const handleClick = () => {
+		setTitle(textInput.current.value)
+	}
+
 	return (
 		<CarouselItem />
 	)

@@ -11,11 +11,13 @@ const mapStateToProps = state => {
 const DropDown = styled.div`
   z-index: 1000;
   display: ${props => props.dropDown ? 'flex' : 'none'};
+  position: absolute;
   align-items: center;
   justify-content: center;
   color: #7e6c54;
   width: 390px;
-  height: 100px;
+  height: 27px;
+  top: 105px;
   border-radius: 2px;
   background: #e4d2ba;
   border: 1px solid #fff;
