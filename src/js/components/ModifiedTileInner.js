@@ -22,7 +22,7 @@ const mapStateToProps = state => {
 const ModifiedTile = styled.div`
   display: ${props => props.socials ? "flex" : "none"};
   position: absolute;
-  z-index: 600;
+  z-index: 100;
   align-items: center;
   justify-content: space-around;
   padding-top: 0;

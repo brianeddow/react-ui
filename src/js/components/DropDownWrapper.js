@@ -16,7 +16,7 @@ const DropDown = styled.div`
   justify-content: center;
   color: #7e6c54;
   width: 390px;
-  height: 27px;
+  height: 0;
   top: 105px;
   border-radius: 2px;
   background: #e4d2ba;

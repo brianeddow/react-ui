@@ -14,7 +14,7 @@ const mapStateToProps = state => {
 }
 
 const BannerInner = styled.div`
-  z-index: 0;
+  z-index: 50;
   display: block;
   margin: 0 auto;
   width: 392px;
@@ -29,6 +29,7 @@ const BannerInner = styled.div`
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 `;
 
+
 class BannerWrapper extends Component {
 
   handleMouseToggle = () => {
@@ -37,9 +38,9 @@ class BannerWrapper extends Component {
 
   render() {
     return (
-      <BannerInner onClick={_.debounce(() => this.handleMouseToggle(), 300)} >
+      <BannerInner onClick={_.debounce(() => this.handleMouseToggle(), 500)} >
         <FontAwesomeIcon icon={faAngleDoubleDown}/>
-        <AnimatedNavBar onMouseLeave={() => this.handleMouseToggle()} />
+        <AnimatedNavBar onMouseOut={_.debounce(() => this.handleMouseToggle(), 500)} />
       </BannerInner>
     )
   }

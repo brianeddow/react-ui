@@ -12,8 +12,8 @@ const NextOuter = styled.div`
 	bottom: 0;
 	right: 0
 	display: flex;
-	z-index: 1200;
-	background: #eee;
+	z-index: 300;
+	background: #D2B48C;
 `;
 
 const NextInner = styled.div`
@@ -28,28 +28,29 @@ const NextInner = styled.div`
 
 const FloatingTile = styled.div`
 	position: relative;
-	z-index: 100;
+	z-index: 400;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
 	user-select: none;
-	width: 450px;
+	width: 300px;
 	height: 400px;
 	border: 0;
+	border-top-right-radius: 50px;
 	font-family: Quicksand, sans-serif;
 	font-size: 10pt;
-	font-weight: 100;
+	font-weight: 400;
 	letter-spacing: 2px;
 	text-decoration: none;
 	color: #000;
 	background: #fff;
-	filter: drop-shadow(0 0 0.75rem #aaa);
+	filter: drop-shadow(0 0 1.55rem #800);
 `;
 
 const ImageTile = styled.div`
 	position: relative;
-	z-index: 200;
+	z-index: 400;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -65,6 +66,7 @@ const ImageTile = styled.div`
 const Tools = [
 	"REACT",
 	"REACT-REDUX",
+	"HOOKS",
 	"REACT ROUTER",
 	"STYLED COMPONENTS",
 	"JEST"
@@ -74,7 +76,7 @@ const liStyle = {
 	'listStyleType': 'none',
 	'textAlign': 'center',
 	'marginLeft': '-30px',
-	'lineHeight': '60px',
+	'lineHeight': '50px',
 	'fontColor': '#000'	
 };
 
@@ -86,7 +88,8 @@ const linkStyle = {
 
 const imgStyle = {
 	'width': '450px',
-	'height': '400px'
+	'height': '400px',
+	'border-bottom-left-radius': '85px'
 };
 
 const style = {
@@ -99,7 +102,7 @@ class NextPage extends Component {
 
 	constructor(props) {
 		super(props);
-		this.bg = "../../src/media/watercolor.png";
+		this.bg = "../../src/media/carouselOneImage.png";
 	}
 
 	render() {
