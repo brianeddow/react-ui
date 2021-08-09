@@ -5,7 +5,7 @@ import toggleState from "../actions/index";
 import AnimatedNavBar from "./AnimatedNavBar";
 import _ from "lodash";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAngleDoubleDown } from '@fortawesome/free-solid-svg-icons';
+import { faAngleDoubleDown, faHamburger } from '@fortawesome/free-solid-svg-icons';
 
 const mapStateToProps = state => {
   return {
@@ -38,10 +38,10 @@ class BannerWrapper extends Component {
 
   render() {
     return (
-      <BannerInner onClick={_.debounce(() => this.handleMouseToggle(), 500)} >
-        <FontAwesomeIcon icon={faAngleDoubleDown}/>
-        <AnimatedNavBar onMouseOut={_.debounce(() => this.handleMouseToggle(), 500)} />
-      </BannerInner>
+      <>
+        <BannerInner onClick={_.debounce(() => this.handleMouseToggle(), 250)} />
+        <AnimatedNavBar onMouseLeave={_.debounce(() => this.handleMouseToggle(), 250)} />
+      </>
     )
   }
 }

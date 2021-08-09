@@ -26,6 +26,7 @@ const ModifiedTile = styled.div`
   align-items: center;
   justify-content: space-around;
   padding-top: 0;
+  padding-left: 5px;
   width: 400px;
   border: 0;
   background: transparent;

@@ -89,7 +89,7 @@ const linkStyle = {
 const imgStyle = {
 	'width': '450px',
 	'height': '400px',
-	'border-bottom-left-radius': '85px'
+	'borderBottomLeftRadius': '85px'
 };
 
 const style = {

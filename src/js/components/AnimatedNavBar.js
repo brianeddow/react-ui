@@ -5,7 +5,7 @@ import DropDownWrapper from "./DropDownWrapper";
 import Icon from "./Icon";
 
 class AnimatedNavBar extends Component {
-
+  
   size = "2x";
 
   render() {

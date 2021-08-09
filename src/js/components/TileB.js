@@ -23,7 +23,7 @@ const TileInner = styled.div`
   align-items: center;
   justify-content: center;
   margin-bottom: 3px;
-  margin-left: 3px;
+  margin-left: 5px;
   width: 396px;
   height: 50px;
   color: ${props => props.extras ? `${this.propshoverClr}` : "#7e6c54"};
@@ -33,7 +33,7 @@ const TileInner = styled.div`
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 
   &:hover ${TileInner} {
-    transform: translate(-3px,-1px);
+    transform: translate(-1px,-1px);
     background: #faf7f3;
     border-bottom: 1px solid #544838;
     border-right: 1px solid #e4d2ba;
