@@ -5,7 +5,7 @@ import toggleState from "../actions/index";
 import AnimatedNavBar from "./AnimatedNavBar";
 import _ from "lodash";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAngleDoubleDown, faHamburger } from '@fortawesome/free-solid-svg-icons';
+import { faAngleDoubleDown } from '@fortawesome/free-solid-svg-icons';
 
 const mapStateToProps = state => {
   return {
@@ -24,7 +24,7 @@ const BannerInner = styled.div`
   margin-bottom: 5px;
   color: #544838;
   border: 1px solid #7e6c54;
-  border-radius: 2px;
+  border-radius: 4px;
   background: linear-gradient(#d2b48c, #a89070);
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 `;

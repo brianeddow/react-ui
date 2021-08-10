@@ -8,7 +8,7 @@ const CarouselWrapper = styled.div`
   width: 400px;
   height: 300px;
   overflow: hidden;
-  border-radius: 14pt;
+  border-radius: 4px;
 `;
 
 export default CarouselWrapper;

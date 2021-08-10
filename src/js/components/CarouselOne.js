@@ -8,7 +8,7 @@ const CarouselOne = styled.div`
   height: 100%;
   margin-right: 1px;
   border: 0;
-  border-radius: 14pt;
+  border-radius: 4px;
   background: url(${props => props.bg});
   background-size: cover;
   background-repeat: no-repeat;

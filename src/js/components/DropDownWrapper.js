@@ -9,7 +9,7 @@ const mapStateToProps = state => {
 }
 
 const DropDown = styled.div`
-  z-index: 1000;
+  z-index: 200;
   display: ${props => props.dropDown ? 'flex' : 'none'};
   position: relative;
   top: 0;
@@ -28,12 +28,10 @@ const DropDown = styled.div`
   opacity: 0.8;
   transition-property: height;
   transition: 500ms ease-in-out;
-  transform: rotateX(-5deg);
 
   &:hover ${DropDown} {
     opacity: 1;
     transition: 150ms ease-in-out;
-    tranform: rotateX(0deg);
   }
 `;
 

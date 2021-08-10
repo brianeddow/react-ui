@@ -26,7 +26,7 @@ const TileInner = styled.div`
   margin-left: 5px;
   width: 396px;
   height: 50px;
-  color: ${props => props.extras ? `${this.propshoverClr}` : "#7e6c54"};
+  color: ${props => props.extras ? `${this.props.hoverClr}` : "#7e6c54"};
   background: ${props => props.extras ? `${this.props.hoverClr}` : "#fff"};
   border-radius: 2px;
   transition: transform 130ms ease-out;

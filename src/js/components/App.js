@@ -24,8 +24,6 @@ import {
   faAngleDoubleDown 
 } from '@fortawesome/free-solid-svg-icons';
 
-/* 
- * for testing purposes, easier to comment out */
 
 //import { toggleState } from "../actions/index";
 //import store from "../store/index";
@@ -39,7 +37,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    console.log("Hi there. Thanks for visiting my React Redux app.")
+    console.log("Hi there. Thanks for visiting my React app.")
     this.getBacon()
   }
 

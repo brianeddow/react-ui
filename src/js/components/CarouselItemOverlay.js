@@ -15,7 +15,7 @@ const Overlay = styled.div`
   height: 300px;
   margin-top: ${props => props.carouselOne ? "0" : "-301px"};
   opacity: 0.2;
-  border-radius: 14pt;
+  border-radius: 4px;
   background: #fff;
   transition: 225ms cubic-bezier(.23,.6,.83,.67);
 
