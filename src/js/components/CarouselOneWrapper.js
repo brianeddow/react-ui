@@ -14,7 +14,7 @@ const Inner = styled.div`
 	width: 400px;
 	height: 300px;
 	color: #000;
-	font-size: 57pt;
+	font-size: 77pt;
 `;
 
 class CarouselOneWrapper extends Component {

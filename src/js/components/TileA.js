@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { connect } from "react-redux";
 import toggleState from "../actions/index";
 import _ from "lodash";
